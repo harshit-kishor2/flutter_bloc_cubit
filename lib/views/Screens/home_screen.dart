@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cubit_demo/view_model/view_model.dart';
+import 'package:cubit_demo/views/Screens/tab_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -113,6 +114,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       onDecrement(context);
                     },
                     child: const Text("Decrement"),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const TabView()));
+                    },
+                    child: const Text("Open Tab View"),
                   )
                 ],
               )
